@@ -1,0 +1,27 @@
+# git管理外のファイルは Docker ビルドに含めない
+.git
+.gitignore
+
+# macOS 系
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# whisper.cpp のビルド成果物
+/opt/whisper.cpp/build/
+/opt/whisper.cpp/models/
+
+# ローカル音声ファイル／キャッシュ
+data/
+*.m4a
+*.wav
+
+# Python 環境
+venv/
+__pycache__/
+*.pyc
+
+# Docker Compose override やログ類
+docker-compose.override.yml
+*.log
