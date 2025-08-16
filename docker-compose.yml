@@ -1,0 +1,12 @@
+services:
+  whisper:
+    build: .
+    container_name: whisper-cpp
+    working_dir: /work
+    volumes:
+      - ./data:/work/data           # 入出力
+      - ./models:/work/models       # モデル置き場
+      - ./scripts:/work/scripts     # スクリプト
+    tty: true
+    stdin_open: true
+    # CPUスレッド数などを調整したい場合は環境変数化も可
